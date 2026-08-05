@@ -1,0 +1,4 @@
+node_modules/
+.gemini/
+*.js.map
+*.log

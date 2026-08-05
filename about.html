@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Bookshop &amp; Stationery Store</title>
+    <meta name="description"
+        content="Learn about Bookshop. Read our founding story, mission, store values, meet our curation team, and see our schedule of community events.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50" style="height: 40px; width: auto; max-width: 280px;">
+                    <g fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(6, 6)">
+                        <path d="M2 30h10a4 4 0 0 1 4 4v2A4 4 0 0 0 12 32H2z" fill="var(--primary)" opacity="0.15" />
+                        <path d="M2 6v26c0 .6.4 1 1 1h9c2.2 0 4 1.8 4 4V10c0-2.2-1.8-4-4-4H3c-.6 0-1 .4-1 1z" stroke="var(--primary)" stroke-width="2.5" />
+                        <path d="M16 10c0-2.2 1.8-4 4-4h9c.6 0 1 .4 1 1v26c0 .6-.4 1-1 1h-9c-2.2 0-4 1.8-4 4" stroke="var(--primary)" stroke-width="2.5" />
+                        <path d="M12 12h-4M12 18h-4M12 24h-4" stroke="var(--primary)" stroke-width="1.8" opacity="0.7"/>
+                        <path d="M20 12h4M20 18h4M20 24h4" stroke="var(--primary)" stroke-width="1.8" opacity="0.7"/>
+                    </g>
+                    <text x="46" y="31" font-family="'Playfair Display', serif" font-weight="800" font-size="16" fill="var(--text)" letter-spacing="0.5">Bookshop &amp; Stationery</text>
+                </svg>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="stationery.html">Stationery</a>
+                <a href="new-arrivals.html">New Arrivals</a>
+                <a href="staff-picks.html">Staff Picks</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="nav-controls-group">
+                    <button id="rtl-toggle" class="control-btn" title="Toggle RTL/LTR">RTL</button>
+                    <div class="control-separator"></div>
+                    <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                        <i data-lucide="sun" class="theme-icon-sun"></i>
+                        <i data-lucide="moon" class="theme-icon-moon"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-primary login-btn">Login</a>
+                <button id="mobile-menu-btn" class="toggle-btn mobile-only" title="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="mobile-menu-close" class="close-menu-btn" title="Close Menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="stationery.html">Stationery</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="staff-picks.html">Staff Picks</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="btn btn-primary login-btn-mobile">Login</a>
+        </nav>
+    </div>
+
+    <!-- 1. Hero -->
+    <section class="hero" style="min-height: 45vh; padding: 120px 0 60px;">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=2000');"></div>
+        <div class="container">
+            <div class="hero-content" style="text-align: center; margin: 0 auto;">
+                <h1>Our Story &amp; <br><span style="color: var(--accent);">Purpose</span></h1>
+                <p style="max-width: 800px; margin: 0 auto 1.5rem;">Learn about our journey from a small neighborhood book shelf to a premium independent sanctuary celebrating literature and artisan stationery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Our Story -->
+    <section style="background-color: var(--surface);" id="story">
+        <div class="container">
+            <div class="grid about-grid reveal" style="align-items: center; gap: 4rem;">
+                <div>
+                    <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Preserving Print Culture</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Our Story</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">Founded in 2020 by former literature professors and bookbinders, Bookshop started with a mission to keep physical reading culture alive in the digital age. We noticed a lack of community spaces where readers could gather, discuss, and enjoy fine tactile stationery, and set out to bridge the gap.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">Today, we have grown into a premier literary sanctuary featuring over 1,500 curated titles, a cozy wood-paneled reading lounge, and weekly creative writing workshops. We continue to support independent publishers and offer hand-pressed customized bindings for collectors.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&q=80&w=800" alt="Flagship Interior" style="width: 100%; border-radius: 32px; box-shadow: var(--shadow); object-fit: cover; height: 380px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Mission -->
+    <section id="mission">
+        <div class="container">
+            <div class="grid about-grid reveal" style="align-items: center; gap: 4rem;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800" alt="Curated Book Shelves" style="width: 100%; border-radius: 32px; box-shadow: var(--shadow); object-fit: cover; height: 380px;">
+                </div>
+                <div>
+                    <span style="color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">The Core Goal</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Our Mission</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">Our mission is to foster intellectual curiosity and creative expression by providing human-curated literature and artisan writing tools. We believe that physical books and handwritten correspondence connect people in ways that digital mediums cannot replicate.</p>
+                    <p style="color: var(--text-muted); line-height: 1.8;">By prioritizing quality materials, independent authors, and welcoming spaces, we aim to preserve and support the literary arts in our local community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Store Values -->
+    <section style="background-color: var(--surface);" id="values">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">What We Stand For</span>
+                <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Store Values</h2>
+                <p style="color: var(--text-muted);">The core beliefs that shape our bookstore operations and community partnerships.</p>
+            </div>
+            <div class="grid grid-3 reveal">
+                <!-- Value 1 -->
+                <div class="card" style="padding: 2rem; border-radius: 24px;">
+                    <div style="color: var(--primary); margin-bottom: 1rem;"><i data-lucide="heart" size="32"></i></div>
+                    <h3>Intellectual Integrity</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem;">We showcase a diverse, uncensored library representing historical, political, and cultural perspectives from worldwide authors.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="card" style="padding: 2rem; border-radius: 24px;">
+                    <div style="color: var(--secondary); margin-bottom: 1rem;"><i data-lucide="feather" size="32"></i></div>
+                    <h3>Artisan Craftsmanship</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem;">We support traditional bookbinders, stationery makers, and ink developers who use sustainable and heavy archival materials.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="card" style="padding: 2rem; border-radius: 24px;">
+                    <div style="color: var(--accent); margin-bottom: 1rem;"><i data-lucide="users" size="32"></i></div>
+                    <h3>Inclusive Community</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem;">Our reading lounge is a public living room where all individuals are welcome to read, write, study, and share discussions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Meet the Team -->
+    <section id="team">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">The Curators</span>
+                <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Meet the Team</h2>
+                <p style="color: var(--text-muted);">The passionate book lovers, binders, and writing enthusiasts who look after our shelves.</p>
+            </div>
+            <div class="grid grid-3 reveal">
+                <!-- Curator 1 -->
+                <div style="text-align: center;">
+                    <img src="https://i.pravatar.cc/300?u=team1" alt="Marcus Thorne" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid var(--primary);">
+                    <h3>Marcus Thorne</h3>
+                    <p style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Co-Founder &amp; Chief Curator</p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 280px; margin: 0.5rem auto 0;">Former literature professor specializing in poetry, historical archives, and custom binding options.</p>
+                </div>
+                <!-- Curator 2 -->
+                <div style="text-align: center;">
+                    <img src="https://i.pravatar.cc/300?u=team2" alt="Elena Rodriguez" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid var(--secondary);">
+                    <h3>Elena Rodriguez</h3>
+                    <p style="color: var(--secondary); font-weight: 700; font-size: 0.9rem;">Lead Translator &amp; Buyer</p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 280px; margin: 0.5rem auto 0;">Curates our European and Asian imported collections. Organizes monthly translation panels.</p>
+                </div>
+                <!-- Curator 3 -->
+                <div style="text-align: center;">
+                    <img src="https://i.pravatar.cc/300?u=team3" alt="Julian Vance" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid var(--accent);">
+                    <h3>Julian Vance</h3>
+                    <p style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">Stationery &amp; Tools Specialist</p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 280px; margin: 0.5rem auto 0;">A master calligrapher who curates our writing tool supplies, inks, desk organizers, and wax seal kits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Community Events -->
+    <section style="background-color: var(--surface);" id="events">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Lounge Gatherings</span>
+                <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Community Events</h2>
+                <p style="color: var(--text-muted);">Join us in the wood-paneled reading lounge for discussions, workshops, and panels.</p>
+            </div>
+            <div class="grid grid-3 reveal">
+                <!-- Event 1 -->
+                <div class="card" style="display: flex; flex-direction: column; height: auto; padding: 2rem;">
+                    <div style="background: rgba(74, 48, 38, 0.05); color: var(--primary); padding: 0.5rem 1rem; border-radius: 12px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">
+                        Every Thursday | 7:00 PM
+                    </div>
+                    <h3>Weekly Reading Circle</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">Join our community booksellers in discussing contemporary fiction, classical novels, and short stories.</p>
+                    <span style="font-size: 0.85rem; color: var(--primary); font-weight: bold;">Free Entry • Open to All</span>
+                </div>
+                <!-- Event 2 -->
+                <div class="card" style="display: flex; flex-direction: column; height: auto; padding: 2rem;">
+                    <div style="background: rgba(43, 71, 55, 0.05); color: var(--secondary); padding: 0.5rem 1rem; border-radius: 12px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">
+                        Bi-Weekly Sat | 2:00 PM
+                    </div>
+                    <h3>Calligraphy Workshops</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">Led by Julian Vance. Learn the basics of dip pen lettering, custom inkwells, and envelope wax stamping.</p>
+                    <span style="font-size: 0.85rem; color: var(--secondary); font-weight: bold;">$15 Registration fee</span>
+                </div>
+                <!-- Event 3 -->
+                <div class="card" style="display: flex; flex-direction: column; height: auto; padding: 2rem;">
+                    <div style="background: rgba(194, 153, 59, 0.05); color: var(--accent); padding: 0.5rem 1rem; border-radius: 12px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; display: inline-block; align-self: flex-start;">
+                        Monthly Friday | 6:30 PM
+                    </div>
+                    <h3>Author Panel &amp; Q&amp;A</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">An evening panel showcasing local independent novelists and poets detailing their drafting processes.</p>
+                    <span style="font-size: 0.85rem; color: var(--accent); font-weight: bold;">Free • Reservation recommended</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Footer CTA -->
+            <div class="footer-cta reveal">
+                <div>
+                    <h2>Looking for a Hard-to-Find Title?</h2>
+                    <p>Submit a request to our Special Order Desk and let us track down rare or out-of-print books.</p>
+                </div>
+                <a href="contact.html" class="btn"
+                    style="background: white; color: var(--primary); padding: 1rem 2rem; font-size: 1.1rem;">Request Special Order</a>
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50" style="height: 40px; width: auto; max-width: 280px;">
+                    <g fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(6, 6)">
+                        <path d="M2 30h10a4 4 0 0 1 4 4v2A4 4 0 0 0 12 32H2z" fill="var(--primary)" opacity="0.15" />
+                        <path d="M2 6v26c0 .6.4 1 1 1h9c2.2 0 4 1.8 4 4V10c0-2.2-1.8-4-4-4H3c-.6 0-1 .4-1 1z" stroke="var(--primary)" stroke-width="2.5" />
+                        <path d="M16 10c0-2.2 1.8-4 4-4h9c.6 0 1 .4 1 1v26c0 .6-.4 1-1 1h-9c-2.2 0-4 1.8-4 4" stroke="var(--primary)" stroke-width="2.5" />
+                        <path d="M12 12h-4M12 18h-4M12 24h-4" stroke="var(--primary)" stroke-width="1.8" opacity="0.7"/>
+                        <path d="M20 12h4M20 18h4M20 24h4" stroke="var(--primary)" stroke-width="1.8" opacity="0.7"/>
+                    </g>
+                    <text x="46" y="31" font-family="'Playfair Display', serif" font-weight="800" font-size="16" fill="var(--text)" letter-spacing="0.5">Bookshop &amp; Stationery</text>
+                </svg>
+                    </a>
+                    <p style="color: var(--text-muted);">A warm literary haven celebrating the joy of reading, writing, and fine craftsmanship.</p>
+                    <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="staff-picks.html">Staff Picks</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Collections</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="books.html">Literary Fiction</a></li>
+                        <li><a href="stationery.html">Fine Stationery</a></li>
+                        <li><a href="books.html">History &amp; Essays</a></li>
+                        <li><a href="stationery.html">Notebooks &amp; Pens</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="about.html">Book Lounge</a></li>
+                        <li><a href="contact.html">Special Order Form</a></li>
+                        <li><a href="contact.html#faq">Common FAQs</a></li>
+                        <li><a href="contact.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bookshop. All rights reserved. | <a href="#" style="text-decoration: underline;">Terms of Service</a> | <a href="#" style="text-decoration: underline;">Privacy Policy</a></p>
+                <a href="#" class="back-to-top" title="Back to Top">
+                    <i data-lucide="arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
