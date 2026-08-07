@@ -74,6 +74,7 @@ html {
 
 /* RTL Support */
 [dir="rtl"] {
+    direction: rtl;
     text-align: right;
 }
 
@@ -496,16 +497,28 @@ header {
 }
 
 .grid-3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 2rem;
+    align-items: stretch;
 }
 
 .grid-3>* {
-    flex: 1 1 300px;
-    max-width: 400px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
 }
 
 .grid-2 {
@@ -893,6 +906,46 @@ footer {
     left: 1.5rem;
 }
 
+[dir="rtl"] .auth-card .logo {
+    justify-content: flex-start !important;
+}
+
+[dir="rtl"] .form-group div > i[data-lucide="mail"],
+[dir="rtl"] .form-group div > i[data-lucide="lock"],
+[dir="rtl"] .form-group div > svg.lucide-mail,
+[dir="rtl"] .form-group div > svg.lucide-lock {
+    left: auto !important;
+    right: 1rem !important;
+}
+
+[dir="rtl"] .form-group div > i[data-lucide="eye"],
+[dir="rtl"] .form-group div > svg.lucide-eye {
+    right: auto !important;
+    left: 1rem !important;
+}
+
+[dir="rtl"] .form-group div:has(.lucide-mail) input,
+[dir="rtl"] .form-group div:has([data-lucide="mail"]) input,
+[dir="rtl"] .form-group div:has(svg.lucide-mail) input {
+    padding-left: 1rem !important;
+    padding-right: 3rem !important;
+}
+
+[dir="rtl"] .form-group div:has(.lucide-lock) input,
+[dir="rtl"] .form-group div:has([data-lucide="lock"]) input,
+[dir="rtl"] .form-group div:has(svg.lucide-lock) input {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+[dir="rtl"] .form-group div:not(:has(.lucide-lock)):not(:has([data-lucide="lock"])):not(:has(svg.lucide-lock)):has(.lucide-eye) input,
+[dir="rtl"] .form-group div:not(:has(.lucide-lock)):not(:has([data-lucide="lock"])):not(:has(svg.lucide-lock)):has([data-lucide="eye"]) input,
+[dir="rtl"] .form-group div:not(:has(.lucide-lock)):not(:has([data-lucide="lock"])):not(:has(svg.lucide-lock)):has(svg.lucide-eye) input {
+    padding-left: 3rem !important;
+    padding-right: 1rem !important;
+}
+
+
 .auth-card {
     background: var(--surface);
     padding: 3rem;
@@ -1110,6 +1163,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Uniform Section Headings size in mobile view */
+    section h2,
+    .section-header h2,
+    h2[style*="font-size"] {
+        font-size: 1.8rem !important;
+    }
+
     .logo {
         font-size: 1.25rem;
         gap: 0.35rem;
@@ -1214,6 +1274,18 @@ footer {
     }
 
     .about-cta-buttons a.btn {
+        width: 280px !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .community-btns {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+
+    .community-btns a.btn {
         width: 280px !important;
         max-width: 100% !important;
         justify-content: center !important;
@@ -1689,4 +1761,88 @@ footer {
 [data-theme="dark"] #theme-toggle .theme-icon-sun {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+/* Why Choose Us Feature Cards Hover Effects */
+.feature-card h3 {
+    transition: var(--transition);
+}
+
+.feature-card p {
+    transition: var(--transition);
+}
+
+.feature-card .feature-icon {
+    transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.15);
+}
+
+.feature-primary:hover h3 {
+    color: var(--primary);
+}
+
+.feature-secondary:hover h3 {
+    color: var(--secondary);
+}
+
+.feature-accent:hover h3 {
+    color: var(--accent);
+}
+
+.feature-card:hover p {
+    color: var(--text);
+}
+
+/* Feature Icon Circles Background and Visibility - Light Mode */
+.feature-primary .feature-icon {
+    background-color: rgba(74, 48, 38, 0.18) !important;
+}
+
+.feature-secondary .feature-icon {
+    background-color: rgba(43, 71, 55, 0.18) !important;
+}
+
+.feature-accent .feature-icon {
+    background-color: rgba(194, 153, 59, 0.18) !important;
+}
+
+/* Feature Icon Circles Background and Visibility - Dark Mode */
+[data-theme="dark"] .feature-primary .feature-icon {
+    background-color: rgba(194, 153, 59, 0.25) !important;
+}
+
+[data-theme="dark"] .feature-secondary .feature-icon {
+    background-color: rgba(78, 115, 94, 0.25) !important;
+}
+
+[data-theme="dark"] .feature-accent .feature-icon {
+    background-color: rgba(140, 82, 48, 0.25) !important;
+}
+
+/* Align footer CTA button in center below text for all pages except Home page in 1024px view */
+@media (max-width: 1024px) {
+    body:not(.home-page) .footer-cta {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 2rem !important;
+        padding: 2.5rem 1.5rem !important;
+    }
+}
+
+/* Bookseller Note Card responsive alignment */
+.bookseller-note-card {
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .bookseller-note-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 2rem !important;
+        gap: 1.5rem !important;
+    }
 }

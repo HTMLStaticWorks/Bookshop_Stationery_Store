@@ -8,6 +8,6 @@
     <path d="M12 12h-4M12 18h-4M12 24h-4" stroke="#8c2d3a" stroke-width="1.8" opacity="0.7"/>
     <path d="M20 12h4M20 18h4M20 24h4" stroke="#8c2d3a" stroke-width="1.8" opacity="0.7"/>
   </g>
-  <text x="46" y="24" font-family="'Playfair Display', serif" font-weight="800" font-size="16" fill="#221e1a" letter-spacing="0.5">Bookshop</text>
+  <text x="46" y="24" font-family="'Playfair Display', serif" font-weight="800" font-size="19" fill="#221e1a" letter-spacing="0.5">Bookshop</text>
   <text x="46" y="38" font-family="'Lora', serif" font-weight="500" font-size="8.5" fill="#c98a41" letter-spacing="1">STATIONERY &amp; MORE</text>
 </svg>
