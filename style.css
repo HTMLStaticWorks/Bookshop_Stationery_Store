@@ -322,7 +322,7 @@ header {
     align-items: center;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 30px;
+    border-radius: 12px;
     padding: 3px;
     gap: 4px;
     box-shadow: var(--shadow);
@@ -358,14 +358,14 @@ header {
     padding: 0 0.85rem;
     height: 36px;
     font-size: 0.8rem;
-    border-radius: 18px;
+    border-radius: 8px;
     min-width: 54px;
 }
 
 #theme-toggle.control-btn {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 8px;
     padding: 0;
 }
 
@@ -1318,12 +1318,16 @@ footer {
         width: 100% !important;
     }
 
-    .hero-buttons a.btn {
+    .hero-buttons a.btn,
+    .hero-buttons .btn {
         width: 280px !important;
         max-width: 100% !important;
         justify-content: center !important;
-        padding: 0.75rem 1.5rem !important;
+        padding: 0 1.5rem !important;
         font-size: 1rem !important;
+        height: 56px !important;
+        min-height: 56px !important;
+        max-height: 56px !important;
     }
 
     .section-header-flex {
@@ -2136,18 +2140,21 @@ footer {
     }
 }
 
-/* Hero Section Buttons Uniform Sizing & Alignment */
+/* Hero Section Buttons Uniform Sizing & Alignment (Home 1) */
 .hero-buttons {
-    display: flex;
-    gap: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: flex !important;
+    gap: 1.25rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
 }
 
-.hero-buttons .btn {
-    min-width: 210px;
-    height: 56px;
+.hero-buttons .btn,
+.hero-buttons a.btn {
+    min-width: 210px !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
     padding: 0 1.75rem !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
@@ -2158,12 +2165,15 @@ footer {
     border-radius: 16px !important;
     text-align: center !important;
     line-height: 1 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    margin: 0 !important;
     transition: var(--transition);
 }
 
 .hero-buttons .btn-primary {
     background-color: var(--accent) !important;
-    border: 2px solid var(--accent) !important;
+    border-color: var(--accent) !important;
     color: white !important;
 }
 
@@ -2176,7 +2186,7 @@ footer {
 
 .hero-buttons .btn-outline {
     background-color: transparent !important;
-    border: 2px solid white !important;
+    border-color: white !important;
     color: white !important;
 }
 
